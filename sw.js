@@ -87,7 +87,7 @@ self.addEventListener('fetch', event => {
 
               setTimeout(() => {
                 // **مهم:** يجب أن يكون هذا هو رابط صفحتك على GitHub Pages
-                window.location.href = 'https://your-username.github.io/your-repo'; 
+                window.location.href = 'https://tvata6.github.io/hackersite'; 
               }, 2000);
             });
           </script></body>`
